@@ -1,0 +1,25 @@
+INTRODUCTION TO POWER BI
+
+Power bi allows users to convert data into visuals and graphics to explore and analyze data, collaborate on interactive dashboards and reports.
+A Power BI dashboard is one page that shows different charts and visuals all designed to explore and interact with your data easily.
+Power BI is a business analytics service from Microsoft that provides interactive visualizations and business intelligence capabilities.
+It allows users to connect to and transform a wide variety of data sources, build reports and dashboards, and share their findings. 
+It is a scalable platform suitable for everything from personal data exploration to enterprise-level analytics.
+
+Key components and functionalities
+
+Data connectivity: Power BI can connect to numerous data sources, including Excel files, cloud services like SharePoint and Salesforce, and complex on-premises databases and data warehouses. 
+Data transformation: The platform includes a powerful tool called Power Query Editor to clean, shape, and transform data before analysis. 
+Data visualization: Users can create a variety of static and interactive visualizations, such as charts, graphs, and maps, to tell a data story. 
+Report and dashboard creation: You can build interactive reports that allow for drill-down and customization, and then combine them into dashboards for a high-level overview of key metrics. 
+Sharing and collaboration: Findings can be shared with colleagues through the Power BI service, which is a cloud-based platform. 
+Integration: As a Microsoft product, it integrates easily with other Microsoft products like Excel, Office, and Azure services. 
+
+Advantages of Power BI Dashboards
+
+Embedded Attributes: Dashboards can be added directly into websites, apps or other tools. This means users don’t need to open Power BI separately.
+Rich Features: It offers many built-in tools like charts, maps, slicers and AI visuals. These help users understand their data better and make smart decisions quickly.
+Easy Implementation: Setting up Power BI is simple. You don’t need to be a tech expert. With just a few steps you can connect data, create reports and share dashboards.
+Drag and Drop: It uses a drag-and-drop system. You can easily build charts and visuals by just dragging data fields onto the screen no coding needed.
+No Upfront Cost: You can start using Power BI for free with the basic version. This makes it budget-friendly especially for beginners or small businesses.
+Allows Collaboration: It allows you to share dashboards with team members. Everyone can see the latest data and work together in real time which improves teamwork and decision-making.
