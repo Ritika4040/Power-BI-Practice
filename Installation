@@ -5,7 +5,7 @@ and share insights. It's free for basic use (Power BI Desktop) and has paid vers
 
 Installation
 
-Download Power BI Desktop from the official Microsoft site (powerbi.microsoft.com).
+Download Power BI Desktop from the Microsoft store or from official Microsoft site (powerbi.microsoft.com).
 Run the installer and sign in with your Microsoft account.
 
 Getting Started: Basic Steps
@@ -57,3 +57,5 @@ Slow Performance: Limit data imports; use aggregations or summarize tables.
 DAX Errors: Test formulas in a new measure; use IntelliSense for auto-complete. Common mistake: Forgetting to use SUMX for row-by-row calculations.
 Sharing Issues: Ensure recipients have access; use "Publish to Web" for public embeds (with caution on sensitive data).
 Version Conflicts: Keep Power BI Desktop updated; cloud features may require Pro/Premium licenses.
+
+
