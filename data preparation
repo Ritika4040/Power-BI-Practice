@@ -1,0 +1,68 @@
+Data Preparation and Basic Visualizations
+
+Data Cleaning with Power Query
+
+Open Power Query Editor (Home > Transform Data).
+Steps: Remove duplicates, filter rows (e.g., exclude null values), split columns, merge tables.
+Example: Clean a dataset by removing rows where Sales Amount < 0.
+Apply changes and load back to Power BI.
+Building Your First Report
+
+Switch to Report view.
+
+Create visuals: Drag fields from Fields pane to canvas.
+Table: Display raw data.
+Bar Chart: X-axis = Product, Y-axis = Sum of Sales Amount.
+Pie Chart: For regional breakdowns.
+Customize: Change colors, add titles, enable tooltips (hover for details).
+
+Interactivity and Filters
+
+Add slicers: Insert > Slicer > Drag Region field – filters all visuals on the page.
+Drill-down: Right-click a bar in a chart to explore sub-levels (e.g., from category to subcategory).
+Cross-filtering: Click a visual element to filter others.
+
+Hands-On Exercise
+
+Build a simple dashboard: Import sample data, create 3 visuals (chart, table, map), add a slicer.
+Publish to Power BI Service (File > Publish) for sharing.
+
+Key Takeaways
+
+Power BI emphasizes data preparation before visualization.
+Start simple: Focus on one dataset and build iteratively.
+Resources: Microsoft Learn modules on data import.
+
+Step-by-Step Data Preparation Process
+
+Connect and Import Data:
+
+In Power BI Desktop, click Get Data > Select source (e.g., Excel file).
+Preview data in the Navigator window; select tables/queries to import.
+For large datasets, use "DirectQuery" mode to query live data without importing everything.
+
+Open Power Query Editor:
+
+Review the data preview pane. Columns show data types (e.g., Text, Number, Date).
+The Applied Steps pane tracks every change—click a step to undo/redo.
+
+Clean and Transform:
+
+Remove Unwanted Data: Use Home > Remove Rows > Remove Duplicates or Remove Errors.
+Handle Missing Values: Right-click column > Replace Values (e.g., fill nulls with 0 or "Unknown").
+Change Data Types: Select column > Data Type dropdown (e.g., convert text dates to Date type).
+Split/Merge Columns: Home > Split Column (e.g., split "Full Name" into First/Last) or Merge Columns.
+Filter and Sort: Use column filters or Sort Ascending/Descending.
+Pivot/Unpivot: Transform wide tables to long (unpivot) for better analysis, e.g., turning monthly columns into rows.
+
+Advanced Transformations:
+
+Group By: Aggregate data (e.g., sum sales by region).
+Add Custom Columns: Add Column > Custom Column > Use M language (Power Query's formula language) for logic like if [Sales] > 1000 then "High" else "Low".
+Merge Queries: Combine tables (e.g., left join sales with customer data on ID).
+Append Queries: Stack similar tables (e.g., combine Q1 and Q2 sales data).
+
+Apply and Load:
+
+Click Close & Apply to load transformed data into Power BI.
+For complex queries, save as a query group for reuse.
