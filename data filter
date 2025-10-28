@@ -43,3 +43,5 @@ Use cross-filtering to make visuals interactive—selecting one filters others a
 For complex needs, create calculated columns or measures in DAX (Data Analysis Expressions) for custom filters.
 In Power BI Service, filters can be locked or hidden for shared reports.
 Performance: Avoid over-filtering large datasets; use aggregations or summarized tables.
+
+
