@@ -1,0 +1,56 @@
+Data Connectivity in Power BI
+
+Power BI excels at connecting to a wide variety of data sources, allowing you to import, transform, and analyze data from multiple systems. 
+It supports over 70 native connectors, with more available through custom options or APIs. Connectivity is handled primarily through Power 
+Query in Power BI Desktop, which enables data extraction, transformation, and loading (ETL).
+
+Key Categories of Data Sources
+Power BI categorizes connectors into groups for easy access. Here's a breakdown:
+
+Databases:
+
+Relational: SQL Server, Oracle, MySQL, PostgreSQL, IBM DB2, Teradata.
+NoSQL: MongoDB, Cassandra, Azure Cosmos DB.
+Big Data: Hadoop (HDFS), Spark, Hive.
+
+Cloud Services and APIs:
+
+Microsoft: Azure SQL Database, Azure Blob Storage, Azure Synapse Analytics, Dynamics 365, SharePoint.
+Other Clouds: Amazon Redshift, Google BigQuery, Snowflake, Salesforce, Zendesk, GitHub.
+Web APIs: RESTful APIs, OData feeds, JSON/XML endpoints.
+
+Files and Spreadsheets:
+
+Local/Cloud: Excel, CSV, TXT, XML, JSON, Parquet.
+Folders: Import entire directories of files.
+
+Other Sources:
+
+On-Premises: SQL Server Analysis Services (SSAS), SAP HANA, IBM Cognos.
+Streaming: Azure Event Hubs, Power Platform dataflows.
+Custom: ODBC/JDBC for proprietary systems, or build your own via M language in Power Query.
+
+How to Connect Data
+
+In Power BI Desktop: Go to the Home tab > Get Data > Choose a category (e.g., Database, File) > Select the connector > Enter credentials (e.g., server details, API keys).
+Authentication: Supports Windows, database credentials, OAuth, API keys, or Azure Active Directory. For security, use gateways for on-premises data.
+Data Refresh: In the Power BI Service, set up scheduled refreshes (up to 8 times/day on free tier; more on Premium).
+
+DirectQuery vs. Import:
+
+Import: Loads data into Power BI's in-memory engine for fast performance (best for static data).
+DirectQuery: Queries data live from the source (ideal for real-time or large datasets, but may be slower).
+
+Data Transformation and Modeling
+
+Power Query Editor: After connecting, use this to clean data—e.g., merge tables, pivot/unpivot columns, handle errors, or add custom columns with M code.
+Parameters and Dynamic Connections: Create parameters for reusable queries (e.g., switch between dev/prod databases).
+Dataflows: In the Power BI Service, build reusable ETL pipelines that feed multiple reports, reducing duplication.
+
+Security and Governance
+
+Gateways: Install On-Premises Data Gateway (personal or enterprise) to securely access on-prem data from the cloud. Supports scheduled refreshes and live connections.
+Data Privacy Levels: Set levels (Public, Organizational, Private) in Power Query to control data mixing (e.g., prevent combining public web data with private HR data).
+Row-Level Security (RLS): Filter data based on user roles (e.g., managers see all sales; reps see only theirs). Implemented via DAX roles in the model.
+
+
