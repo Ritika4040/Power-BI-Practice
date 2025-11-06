@@ -1,3 +1,5 @@
+visualization tools of power bi
+
 Power BI's visualization tools are at the heart of its appeal, enabling users to transform raw data into compelling, 
 interactive visuals that drive insights and decisions. Below, I'll expand on this topic with detailed explanations,
 examples, best practices, and advanced techniques. While a full 4000-word dissertation isn't practical in this format,
@@ -109,4 +111,4 @@ Retail: Dashboards tracking inventory, sales trends, and customer behavior. Visu
 Finance: Risk analysis with gauge visuals for portfolio performance and forecasting charts for revenue predictions.
 Healthcare: Patient outcome visualizations, with maps showing disease outbreaks.
 Manufacturing: KPI dashboards monitoring production efficiency, using treemaps for defect analysis.
-Case Study: A global retailer used Power BI to create interactive sales dashboards, reducing reporting time by 50% through drill-down visuals and AI insights.
+Case Study: A global retailer used Power BI to create interactive sales dashboards, reducing reporting time by 50% through drill-down visuals and AI insights. 
