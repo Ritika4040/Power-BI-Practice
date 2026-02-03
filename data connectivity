@@ -11,7 +11,7 @@ Databases:
 
 Relational: SQL Server, Oracle, MySQL, PostgreSQL, IBM DB2, Teradata.
 NoSQL: MongoDB, Cassandra, Azure Cosmos DB.
-Big Data: Hadoop (HDFS), Spark, Hive.
+Big Data: Hadoop (HDFS), Spark, Hive. 
 
 Cloud Services and APIs:
 
