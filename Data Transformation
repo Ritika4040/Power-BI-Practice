@@ -1,0 +1,81 @@
+Data Transformation
+
+In Microsoft Power BI, Data Transformation is part of the ETL Process:
+
+* ETL = Extract → Transform → Load
+Extract → Collect data from sources
+Transform → Clean, structure, and modify data
+Load → Store into model
+
+ Definition:
+Data Transformation is the process of converting raw, unstructured data into a clean, structured, and analysis-ready format.
+
+Why Data Transformation is Required?
+* Real-world Data Problems:
+Missing values
+Duplicate records
+Inconsistent formats
+Irrelevant columns
+Incorrect data types
+
+* Without transformation:
+- Wrong analysis
+- Poor performance
+- Misleading insights
+
+* With transformation:
+- Clean data
+- Accurate reports
+- Faster queries
+
+Types of Data Transformation (Theoretical Classification)
+ A. Structural Transformation
+
+Changes the structure of data.
+
+Examples:
+Splitting columns
+Merging columns
+Pivot / Unpivot
+
+* Purpose: Make data suitable for modeling
+
+ B. Content Transformation
+
+Changes the values inside data.
+
+Examples:
+Replace values
+Trim spaces
+Change case
+
+* Purpose: Improve data quality
+
+ C. Semantic Transformation
+
+Changes the meaning or interpretation.
+
+Examples:
+Converting currency (USD → INR)
+Categorizing data (Age → Young/Adult)
+
+* Purpose: Make data meaningful
+
+ D. Aggregation Transformation
+
+Summarizing data.
+
+Examples:
+Sum
+Average
+Count
+
+* Used in Group By
+
+ E. Filtering Transformation
+
+Selecting only required data.
+
+Examples:
+Sales > 1000
+Region = India
