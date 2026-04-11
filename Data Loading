@@ -1,0 +1,82 @@
+What is Data Loading?
+
+In Microsoft Power BI, Data Loading is the process of transferring transformed data from Power Query into the Data Model.
+
+Definition:
+Data Loading is the stage where cleaned and transformed data is stored inside Power BI’s internal storage engine for analysis and visualization.
+
+2. Position in ETL Process
+* ETL Flow:
+Extract → Transform → Load
+Extract → Get data
+Transform → Clean data
+Load → Store data into model
+
+* Data Loading is the final step of ETL
+
+ 3. Where Does Data Get Loaded?
+* Power BI Storage Engine
+
+Data is loaded into:
+* VertiPaq Engine (In-Memory Engine)
+
+* Features:
+Column-based storage
+Data compression
+Fast query execution
+
+ 4. Types of Data Loading Modes :
+
+   A. Import Mode (Most Common)
+* Description:
+Data is copied into Power BI
+
+*Features:
+Fast performance
+Works offline
+Uses VertiPaq
+
+* Limitation:
+Data size limit
+
+B. DirectQuery Mode
+* Description:
+Data stays in source database
+Power BI queries data live
+
+* Features:
+Real-time data
+No data storage in Power BI
+
+* Limitation:
+Slower than Import mode
+
+C. Live Connection
+* Description:
+Connect to external models (like SSAS)
+
+* Features:
+No local model
+Centralized data
+
+D. Composite Mode
+* Description:
+Combination of Import + DirectQuery
+
+* Used for complex models
+
+* 5. Data Loading Process (Step-by-Step)
+ Step 1: Data Transformation Completed
+       Cleaned in Power Query
+ Step 2: Click "Close & Apply"
+      Starts loading process
+ Step 3: Data Compression
+     Removes duplicates
+     Optimizes storage
+ Step 4: Data Stored in Model
+     Tables loaded
+     Ready for relationships
+ Step 5: Model Ready for Use
+     Can create visuals
+
+ 
