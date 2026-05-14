@@ -1,0 +1,281 @@
+# Detailed Power BI Index
+
+## 1. Introduction to Power BI
+
+* What is Power BI
+* Features of Power BI
+* Components of Power BI
+* Advantages of Power BI
+* Business Intelligence Overview
+* Power BI Architecture
+* Uses of Power BI in Industry
+
+---
+
+## 2. Installation and Setup
+
+* Download and Install Power BI Desktop
+* Power BI Service Overview
+* Power BI Mobile App
+* Creating Microsoft Account
+* Interface Overview
+* Power BI Licensing (Free, Pro, Premium)
+
+---
+
+## 3. Power BI Interface
+
+* Home Tab
+* Insert Tab
+* Modeling Tab
+* View Tab
+* Report View
+* Data View
+* Model View
+* Fields Pane
+* Filters Pane
+* Visualization Pane
+
+---
+
+## 4. Data Connectivity
+
+* Connecting Excel Files
+* Connecting CSV Files
+* Connecting SQL Server
+* Connecting MySQL Database
+* Connecting Web Data
+* Connecting APIs
+* Connecting Cloud Sources
+* Import vs DirectQuery
+* Live Connection
+
+---
+
+## 5. Data Transformation using Power Query
+
+* Power Query Editor
+* Cleaning Data
+* Removing Null Values
+* Removing Duplicates
+* Changing Data Types
+* Splitting Columns
+* Merging Columns
+* Conditional Columns
+* Replace Values
+* Append Queries
+* Merge Queries
+* Pivot and Unpivot
+* Group By
+* Extract Functions
+* Date Transformation
+* Text Transformation
+* Query Parameters
+* Applied Steps
+
+---
+
+## 6. Data Modeling
+
+* What is Data Modeling
+* Relationships
+* One-to-One Relationship
+* One-to-Many Relationship
+* Many-to-Many Relationship
+* Cardinality
+* Cross Filter Direction
+* Star Schema
+* Snowflake Schema
+* Fact Tables
+* Dimension Tables
+* Normalization and Denormalization
+
+---
+
+## 7. DAX (Data Analysis Expressions)
+
+* Introduction to DAX
+* Calculated Columns
+* Measures
+* Calculated Tables
+* DAX Syntax
+* Aggregate Functions
+* Logical Functions
+* Text Functions
+* Date & Time Functions
+* Filter Functions
+* Time Intelligence Functions
+* Variables in DAX
+
+### Important DAX Functions
+
+* SUM
+* AVERAGE
+* COUNT
+* DISTINCTCOUNT
+* IF
+* SWITCH
+* CALCULATE
+* FILTER
+* ALL
+* RELATED
+* LOOKUPVALUE
+* TOTALYTD
+* SAMEPERIODLASTYEAR
+
+---
+
+## 8. Data Visualization
+
+* Creating Charts
+* Bar Chart
+* Column Chart
+* Line Chart
+* Pie Chart
+* Donut Chart
+* Area Chart
+* Scatter Plot
+* Tree Map
+* Funnel Chart
+* Gauge Chart
+* KPI Visual
+* Table Visual
+* Matrix Visual
+* Maps and Filled Maps
+* Cards and Multi-row Cards
+* Slicers
+* Drill Down and Drill Through
+* Tooltips
+* Conditional Formatting
+
+---
+
+## 9. Dashboard and Reports
+
+* Creating Reports
+* Creating Dashboards
+* Interactive Reports
+* Bookmarks
+* Buttons
+* Page Navigation
+* Themes
+* Report Formatting
+* Custom Visuals
+* Publish Reports
+
+---
+
+## 10. Power BI Service
+
+* Workspace
+* Dataflows
+* Datasets
+* Reports
+* Dashboards
+* Sharing Reports
+* Collaboration
+* Scheduled Refresh
+* Gateway Configuration
+* Row-Level Security (RLS)
+
+---
+
+## 11. Advanced Power BI
+
+* Advanced DAX
+* Performance Optimization
+* Query Folding
+* Incremental Refresh
+* Composite Models
+* Aggregations
+* AI Visuals
+* Paginated Reports
+* Power BI Embedded
+
+---
+
+## 12. Security in Power BI
+
+* Row-Level Security
+* Object-Level Security
+* Workspace Roles
+* Dataset Permissions
+* Data Protection
+
+---
+
+## 13. Integration with Other Tools
+
+* Excel Integration
+* SQL Server Integration
+* Azure Integration
+* Python Integration
+* R Integration
+* SharePoint Integration
+* Microsoft Teams Integration
+
+---
+
+## 14. Power BI Administration
+
+* Tenant Settings
+* User Management
+* Capacity Management
+* Monitoring and Auditing
+* Usage Metrics
+
+---
+
+## 15. Real-Time Data and Streaming
+
+* Streaming Datasets
+* Real-Time Dashboards
+* IoT Integration
+
+---
+
+## 16. Power BI Projects
+
+* Sales Dashboard Project
+* HR Analytics Dashboard
+* Financial Dashboard
+* Healthcare Dashboard
+* Student Performance Dashboard
+* Inventory Management Dashboard
+
+---
+
+## 17. Interview Questions
+
+* Basic Power BI Questions
+* DAX Interview Questions
+* Scenario-Based Questions
+* Dashboard Design Questions
+
+---
+
+## 18. Best Practices
+
+* Data Modeling Best Practices
+* Dashboard Design Best Practices
+* DAX Optimization
+* Report Performance Improvement
+
+---
+
+## 19. Career and Certification
+
+* Power BI Career Roles
+* Power BI Developer
+* Data Analyst
+* Business Intelligence Analyst
+* Microsoft PL-300 Certification
+
+---
+
+## 20. Conclusion
+
+* Future Scope of Power BI
+* Industry Applications
+* Learning Resources
+* Final Summary
