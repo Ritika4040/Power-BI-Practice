@@ -1,0 +1,771 @@
+# Data Transformation using Power Query in Microsoft Power BI
+
+## Introduction
+
+Data transformation is the process of converting raw data into a clean and useful format for analysis and reporting. 
+In Power BI, data transformation is mainly performed using Power Query.
+
+Power Query helps users:
+
+* Clean messy data
+* Modify columns
+* Remove errors
+* Combine datasets
+* Prepare data for visualization
+
+It follows the ETL process:
+
+1. Extract Data
+2. Transform Data
+3. Load Data
+
+---
+
+# 1. Power Query Editor
+
+## Definition
+
+Power Query Editor is a tool in Power BI used to clean, transform, and prepare data before loading it into reports.
+
+---
+
+# Opening Power Query Editor
+
+## Steps:
+
+1. Open Power BI Desktop.
+2. Click **Home → Transform Data**.
+3. Power Query Editor window opens.
+
+---
+
+# Main Components of Power Query Editor
+
+| Component     | Purpose                      |
+| ------------- | ---------------------------- |
+| Queries Pane  | Shows all queries            |
+| Data Preview  | Displays dataset             |
+| Ribbon Menu   | Transformation tools         |
+| Applied Steps | Shows transformation history |
+| Formula Bar   | Displays M code              |
+
+---
+
+# Features
+
+* User-friendly interface
+* No coding required
+* Automatic step recording
+* Supports multiple data sources
+
+---
+
+# Advantages
+
+* Simplifies data cleaning
+* Saves transformation steps
+* Improves data quality
+
+---
+
+# 2. Cleaning Data
+
+## Definition
+
+Data cleaning removes errors, inconsistencies, and unwanted information from datasets.
+
+---
+
+# Common Data Cleaning Tasks
+
+* Remove blank rows
+* Correct spelling errors
+* Standardize formats
+* Remove duplicates
+* Fix incorrect data types
+
+---
+
+# Importance of Data Cleaning
+
+* Improves report accuracy
+* Enhances analysis quality
+* Reduces errors in dashboards
+
+---
+
+# Example
+
+Before Cleaning:
+
+| Name   | Age |
+| ------ | --- |
+| Ritika | 21  |
+| NULL   | 22  |
+| Ritika | 21  |
+
+After Cleaning:
+
+* Null removed
+* Duplicate removed
+
+---
+
+# 3. Removing Null Values
+
+## Definition
+
+Null values are empty or missing values in a dataset.
+
+---
+
+# Why Remove Null Values?
+
+* Prevent calculation errors
+* Improve data quality
+* Avoid incorrect visualizations
+
+---
+
+# Steps to Remove Null Values
+
+1. Select column.
+2. Click filter dropdown.
+3. Uncheck `(null)` values.
+4. Apply changes.
+
+---
+
+# Example
+
+Before:
+
+| Name   |
+| ------ |
+| Ritika |
+| null   |
+| Aman   |
+
+After:
+
+| Name   |
+| ------ |
+| Ritika |
+| Aman   |
+
+---
+
+# Advantages
+
+* Cleaner datasets
+* Better report accuracy
+
+---
+
+# 4. Removing Duplicates
+
+## Definition
+
+Duplicate values are repeated records in a dataset.
+
+---
+
+# Why Remove Duplicates?
+
+* Prevent incorrect analysis
+* Reduce redundancy
+* Improve storage efficiency
+
+---
+
+# Steps
+
+1. Select columns.
+2. Go to **Home → Remove Rows → Remove Duplicates**.
+
+---
+
+# Example
+
+Before:
+
+| ID | Name   |
+| -- | ------ |
+| 1  | Ritika |
+| 1  | Ritika |
+
+After:
+
+| ID | Name   |
+| -- | ------ |
+| 1  | Ritika |
+
+---
+
+# Advantages
+
+* Accurate reporting
+* Better database consistency
+
+---
+
+# 5. Changing Data Types
+
+## Definition
+
+Data type defines the kind of value stored in a column.
+
+---
+
+# Common Data Types
+
+| Data Type      | Example    |
+| -------------- | ---------- |
+| Text           | "Ritika"   |
+| Whole Number   | 25         |
+| Decimal Number | 10.5       |
+| Date           | 01-01-2025 |
+| Boolean        | True/False |
+
+---
+
+# Why Change Data Types?
+
+* Correct calculations
+* Proper sorting
+* Better visualization
+
+---
+
+# Steps
+
+1. Select column.
+2. Click datatype icon.
+3. Choose required datatype.
+
+---
+
+# Example
+
+Text `"100"` converted to Number `100`.
+
+---
+
+# 6. Splitting Columns
+
+## Definition
+
+Splitting divides one column into multiple columns.
+
+---
+
+# Types of Splitting
+
+* By delimiter
+* By character count
+* By positions
+
+---
+
+# Example
+
+Before:
+
+| Full Name      |
+| -------------- |
+| Ritika Dwivedi |
+
+After Split:
+
+| First Name | Last Name |
+| ---------- | --------- |
+| Ritika     | Dwivedi   |
+
+---
+
+# Steps
+
+1. Select column.
+2. Choose **Split Column**.
+3. Select delimiter (space, comma, etc.).
+
+---
+
+# Advantages
+
+* Better organization
+* Easier analysis
+
+---
+
+# 7. Merging Columns
+
+## Definition
+
+Merging combines multiple columns into one column.
+
+---
+
+# Example
+
+Before:
+
+| First Name | Last Name |
+| ---------- | --------- |
+| Ritika     | Dwivedi   |
+
+After Merge:
+
+| Full Name      |
+| -------------- |
+| Ritika Dwivedi |
+
+---
+
+# Steps
+
+1. Select columns.
+2. Click **Merge Columns**.
+3. Choose separator.
+
+---
+
+# Advantages
+
+* Simplifies data presentation
+* Creates combined fields
+
+---
+
+# 8. Conditional Columns
+
+## Definition
+
+Conditional columns create new values based on conditions.
+
+---
+
+# Similar to IF Statement
+
+Example:
+
+* If marks > 50 → Pass
+* Else → Fail
+
+---
+
+# Steps
+
+1. Go to **Add Column**.
+2. Click **Conditional Column**.
+3. Define conditions.
+
+---
+
+# Example
+
+| Marks | Result |
+| ----- | ------ |
+| 80    | Pass   |
+| 40    | Fail   |
+
+---
+
+# Advantages
+
+* Automates categorization
+* Improves business logic
+
+---
+
+# 9. Replace Values
+
+## Definition
+
+Replace Values changes specific values with new values.
+
+---
+
+# Example
+
+Replace:
+
+* `M` → `Male`
+* `F` → `Female`
+
+---
+
+# Steps
+
+1. Select column.
+2. Right click → Replace Values.
+3. Enter old and new value.
+
+---
+
+# Advantages
+
+* Standardizes data
+* Corrects errors quickly
+
+---
+
+# 10. Append Queries
+
+## Definition
+
+Append Queries combine rows from multiple tables.
+
+---
+
+# Example
+
+Table 1:
+
+| Name   |
+| ------ |
+| Ritika |
+
+Table 2:
+
+| Name |
+| ---- |
+| Aman |
+
+After Append:
+
+| Name   |
+| ------ |
+| Ritika |
+| Aman   |
+
+---
+
+# Types
+
+* Append Queries
+* Append Queries as New
+
+---
+
+# Advantages
+
+* Combines datasets
+* Useful for monthly data files
+
+---
+
+# 11. Merge Queries
+
+## Definition
+
+Merge Queries combine columns from multiple tables using a common field.
+
+---
+
+# Similar to SQL JOIN
+
+---
+
+# Types of Merge
+
+| Type        | Description        |
+| ----------- | ------------------ |
+| Inner Join  | Matching rows only |
+| Left Outer  | All left rows      |
+| Right Outer | All right rows     |
+| Full Outer  | All rows           |
+
+---
+
+# Example
+
+Customer Table joined with Orders Table using Customer ID.
+
+---
+
+# Advantages
+
+* Relates multiple tables
+* Powerful data modeling
+
+---
+
+# 12. Pivot and Unpivot
+
+# Pivot
+
+## Definition
+
+Pivot converts row values into columns.
+
+---
+
+# Example
+
+Before:
+
+| Month | Sales |
+| ----- | ----- |
+| Jan   | 100   |
+| Feb   | 200   |
+
+After Pivot:
+
+| Jan | Feb |
+| --- | --- |
+| 100 | 200 |
+
+---
+
+# Unpivot
+
+## Definition
+
+Unpivot converts columns into rows.
+
+---
+
+# Advantages
+
+* Better data structuring
+* Useful in analytics
+
+---
+
+# 13. Group By
+
+## Definition
+
+Group By summarizes data into categories.
+
+---
+
+# Operations
+
+* Sum
+* Average
+* Count
+* Minimum
+* Maximum
+
+---
+
+# Example
+
+| Department | Salary |
+| ---------- | ------ |
+| HR         | 20000  |
+| HR         | 30000  |
+
+After Group By:
+
+| Department | Total Salary |
+| ---------- | ------------ |
+| HR         | 50000        |
+
+---
+
+# Advantages
+
+* Data summarization
+* Faster analysis
+
+---
+
+# 14. Extract Functions
+
+## Definition
+
+Extract functions retrieve specific parts of data.
+
+---
+
+# Types
+
+## Text Extraction
+
+* First Characters
+* Last Characters
+* Text Before Delimiter
+
+---
+
+# Number Extraction
+
+Extract numeric values.
+
+---
+
+# Date Extraction
+
+Extract:
+
+* Year
+* Month
+* Day
+
+---
+
+# Example
+
+From Date:
+`15-06-2025`
+
+Extract:
+
+* Year → 2025
+* Month → June
+
+---
+
+# 15. Date Transformation
+
+## Definition
+
+Date transformation modifies date-related data.
+
+---
+
+# Common Operations
+
+* Change date format
+* Extract year/month/day
+* Calculate age
+* Week number
+* Month name
+
+---
+
+# Example
+
+Date:
+`16-05-2026`
+
+Extract:
+
+* Year → 2026
+* Month → May
+
+---
+
+# Advantages
+
+* Time-based analysis
+* Trend reporting
+
+---
+
+# 16. Text Transformation
+
+## Definition
+
+Text transformation modifies text values.
+
+---
+
+# Common Operations
+
+| Function  | Purpose                    |
+| --------- | -------------------------- |
+| Uppercase | Convert to capital letters |
+| Lowercase | Convert to small letters   |
+| Trim      | Remove spaces              |
+| Clean     | Remove unwanted characters |
+
+---
+
+# Example
+
+Before:
+`" ritika "`
+
+After Trim:
+`"ritika"`
+
+---
+
+# Advantages
+
+* Standardized text
+* Cleaner reports
+
+---
+
+# 17. Query Parameters
+
+## Definition
+
+Parameters are dynamic values used in queries.
+
+---
+
+# Uses
+
+* Dynamic filtering
+* Server selection
+* Database switching
+
+---
+
+# Example
+
+Parameter:
+`Year = 2025`
+
+Query loads only 2025 data.
+
+---
+
+# Advantages
+
+* Flexible queries
+* Reusable reports
+* Automation support
+
+---
+
+# 18. Applied Steps
+
+## Definition
+
+Applied Steps store every transformation performed in Power Query.
+
+---
+
+# Location
+
+Right-side panel in Power Query Editor.
+
+---
+
+# Example Steps
+
+1. Source
+2. Removed Columns
+3. Changed Type
+4. Filtered Rows
+
+---
+
+# Importance
+
+* Tracks transformations
+* Easy debugging
+* Allows step editing
+
+---
+
+# Advantages
+
+* Transparency
+* Easy modification
+* Error tracking
+
+---
+
+# Conclusion
+
+Power Query is a powerful tool in Microsoft Power BI for cleaning and transforming data. 
+Features like removing duplicates, changing data types, merging queries, pivoting, grouping, 
+and text/date transformations help prepare raw data for accurate business analysis and reporting.
