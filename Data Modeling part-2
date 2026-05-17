@@ -1,0 +1,338 @@
+# Data Modeling in Power BI
+
+## What is Data Modeling
+
+Data Modeling is the process of organizing and connecting data tables to create a proper
+structure for analysis and reporting. It helps Power BI understand how different tables 
+are related to each other.
+
+Data modeling improves:
+
+* Data accuracy
+* Report performance
+* Easy analysis
+* Better visualization
+
+In Power BI, data modeling is done in the **Model View**.
+
+### Example
+
+A sales report may contain:
+
+* Customer Table
+* Product Table
+* Sales Table
+* Date Table
+
+These tables are connected using relationships.
+
+---
+
+# Relationships
+
+Relationships connect tables using common columns.
+
+### Example
+
+Customer Table → CustomerID
+Sales Table → CustomerID
+
+Here, CustomerID is used to connect both tables.
+
+Relationships help:
+
+* Combine data from multiple tables
+* Create reports easily
+* Filter related data automatically
+
+---
+
+# One-to-One Relationship
+
+In a One-to-One relationship, one row from the first table matches only one row in the second table.
+
+### Features
+
+* Rarely used
+* Both tables contain unique values
+* Used for separating sensitive information
+
+### Example
+
+One employee record is connected to one salary record.
+
+---
+
+# One-to-Many Relationship
+
+In a One-to-Many relationship, one row in the first table can relate to many rows in the second table.
+
+This is the most common relationship in Power BI.
+
+### Example
+
+One customer can place many orders.
+
+### Features
+
+* Primary key on one side
+* Foreign key on many side
+* Used in Star Schema
+
+---
+
+# Many-to-Many Relationship
+
+In a Many-to-Many relationship, multiple rows in one table relate to multiple rows in another table.
+
+### Example
+
+One student can join many courses and one course can contain many students.
+
+### Features
+
+* More complex relationship
+* Can create ambiguity
+* Sometimes requires bridge tables
+
+---
+
+# Cardinality
+
+Cardinality defines the type of relationship between tables.
+
+Power BI supports:
+
+* One-to-One (1:1)
+* One-to-Many (1:*)
+* Many-to-One (*:1)
+* Many-to-Many (*:*)
+
+### Importance
+
+* Controls data filtering
+* Improves report accuracy
+* Helps avoid duplicate values
+
+### Example
+
+One customer connected to many sales records.
+
+---
+
+# Cross Filter Direction
+
+Cross Filter Direction controls how filtering works between related tables.
+
+## Types
+
+### Single Direction
+
+Filtering works in only one direction.
+
+Example:
+Customer Table → Sales Table
+
+### Both Direction
+
+Filtering works in both tables.
+
+Example:
+Sales Table ↔ Product Table
+
+### Features
+
+* Used in advanced models
+* Can create performance issues if overused
+
+---
+
+# Star Schema
+
+Star Schema is the most recommended data model in Power BI.
+
+It contains:
+
+* One central Fact Table
+* Multiple surrounding Dimension Tables
+
+The structure looks like a star.
+
+## Fact Table
+
+Contains:
+
+* Sales Amount
+* Quantity
+* Profit
+
+## Dimension Tables
+
+Contains:
+
+* Customer Details
+* Product Details
+* Date Information
+
+## Advantages
+
+* Fast performance
+* Easy to understand
+* Better reporting
+* Simple relationships
+
+### Example
+
+FactSales connected to:
+
+* Customer Table
+* Product Table
+* Date Table
+
+---
+
+# Snowflake Schema
+
+Snowflake Schema is an extended version of Star Schema where dimension tables are further 
+divided into sub-dimension tables.
+
+The structure looks like a snowflake.
+
+### Example
+
+Product Table divided into:
+
+* Category Table
+* Subcategory Table
+
+## Advantages
+
+* Reduces data redundancy
+* Saves storage space
+
+## Disadvantages
+
+* Complex structure
+* Slower performance
+* Harder to understand
+
+---
+
+# Fact Tables
+
+Fact Tables contain measurable and numerical data.
+
+### Contains
+
+* Sales Amount
+* Quantity
+* Profit
+* Revenue
+
+### Features
+
+* Large number of rows
+* Connected to dimension tables
+* Used for calculations
+
+### Example
+
+Sales transactions stored with Product ID and Customer ID.
+
+Fact tables mainly store transactional data.
+
+---
+
+# Dimension Tables
+
+Dimension Tables contain descriptive information.
+
+### Contains
+
+* Customer Name
+* Product Name
+* City
+* Date
+
+### Features
+
+* Smaller tables
+* Used for filtering and grouping
+* Connected to fact tables
+
+### Example
+
+Customer details like name and city.
+
+Dimension tables provide context to fact data.
+
+---
+
+# Normalization and Denormalization
+
+## Normalization
+
+Normalization is the process of dividing data into multiple related tables to reduce redundancy.
+
+### Advantages
+
+* Reduces duplicate data
+* Improves data consistency
+* Saves storage space
+
+### Disadvantages
+
+* More joins required
+* Slower query performance
+
+### Example
+
+Customer details stored separately from orders.
+
+---
+
+## Denormalization
+
+Denormalization combines tables to reduce joins and improve performance.
+
+### Advantages
+
+* Faster reporting
+* Better performance
+* Easy querying
+
+### Disadvantages
+
+* Data redundancy increases
+* More storage required
+
+### Example
+
+Customer and order data stored in one table.
+
+---
+
+# Difference Between Normalization and Denormalization
+
+## Normalization
+
+* Reduces redundancy
+* Uses multiple tables
+* Better consistency
+* Complex queries
+* Used in OLTP systems
+
+## Denormalization
+
+* Increases redundancy
+* Combines tables
+* Better performance
+* Simple queries
+* Used in Data Warehousing
+
+---
+
+# Summary
+
+Data Modeling is an important part of Power BI because it organizes data properly for analysis and reporting.
+Understanding relationships, schemas, fact tables, and dimension tables helps create efficient and accurate dashboards.
