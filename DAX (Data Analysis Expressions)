@@ -1,0 +1,871 @@
+# DAX (Data Analysis Expressions)
+
+## Introduction to DAX
+
+DAX (Data Analysis Expressions) is a formula language used in Microsoft Power BI,
+Excel Power Pivot, and SQL Server Analysis Services (SSAS).
+It is mainly used to perform calculations, create custom columns, build measures, 
+and analyze data in business reports.
+
+DAX helps users create intelligent reports by using formulas similar to Excel
+formulas but with more powerful analytical capabilities.
+
+---
+
+# Features of DAX
+
+* Used for data analysis and calculations
+* Works with tables and relationships
+* Supports dynamic filtering
+* Provides time-based analysis
+* Helps create KPIs and dashboards
+* Supports advanced business logic
+
+---
+
+# Components of DAX
+
+DAX formulas mainly contain:
+
+* Functions
+* Operators
+* Constants
+* References
+
+### Example
+
+```DAX id="oq5c8m"
+Profit = Sales[Revenue] - Sales[Cost]
+```
+
+Here:
+
+* `Profit` → Measure name
+* `Sales[Revenue]` → Column reference
+* `-` → Arithmetic operator
+
+---
+
+# Calculated Columns
+
+## Definition
+
+A Calculated Column is a new column created using DAX formulas.
+The formula is calculated row by row and values are stored permanently in memory.
+
+Calculated columns are mainly used for:
+
+* Data categorization
+* Data transformation
+* Combining fields
+* Creating custom attributes
+
+---
+
+## Syntax
+
+```DAX id="z0nl7e"
+Column_Name = Formula
+```
+
+---
+
+## Example 1: Full Name Column
+
+```DAX id="m4cxzn"
+Full_Name =
+Employees[FirstName] & " " & Employees[LastName]
+```
+
+### Explanation
+
+* `&` joins text values
+* Creates a full name by combining first and last names
+
+---
+
+## Example 2: Product Category
+
+```DAX id="w5p0b0"
+Category =
+IF(Products[Price] > 1000, "Premium", "Standard")
+```
+
+### Explanation
+
+* If product price is greater than 1000 → Premium
+* Otherwise → Standard
+
+---
+
+## Advantages of Calculated Columns
+
+* Useful for grouping data
+* Can be used in slicers and filters
+* Easy to create custom classifications
+
+---
+
+## Limitations
+
+* Increases model size
+* Uses memory because values are stored physically
+
+---
+
+# Measures
+
+## Definition
+
+Measures are dynamic calculations used for aggregations such as:
+
+* Sum
+* Average
+* Count
+* Profit
+* Percentage
+
+Measures are calculated only when required inside visuals.
+
+---
+
+## Syntax
+
+```DAX id="ewll8m"
+Measure_Name = Formula
+```
+
+---
+
+## Example 1: Total Sales
+
+```DAX id="e5nmdo"
+Total_Sales = SUM(Sales[Amount])
+```
+
+### Explanation
+
+* SUM function adds all sales amounts
+
+---
+
+## Example 2: Profit Margin
+
+```DAX id="ewm4an"
+Profit_Margin =
+DIVIDE(
+SUM(Sales[Profit]),
+SUM(Sales[Revenue])
+)
+```
+
+### Explanation
+
+* DIVIDE safely divides values
+* Avoids divide-by-zero errors
+
+---
+
+## Advantages of Measures
+
+* Faster performance
+* Consumes less memory
+* Dynamic calculations
+* Best for reports and charts
+
+---
+
+# Difference Between Calculated Columns and Measures
+
+| Feature     | Calculated Column | Measure             |
+| ----------- | ----------------- | ------------------- |
+| Calculation | Row by Row        | Aggregated          |
+| Storage     | Stored in memory  | Not stored          |
+| Performance | Slower            | Faster              |
+| Usage       | Filters/Slicers   | Visual Calculations |
+
+---
+
+# Calculated Tables
+
+## Definition
+
+Calculated Tables are tables created using DAX formulas instead of importing data directly.
+
+They are useful for:
+
+* Summary tables
+* Filtered tables
+* Intermediate calculations
+
+---
+
+## Syntax
+
+```DAX id="lmfx0w"
+Table_Name = Formula
+```
+
+---
+
+## Example
+
+```DAX id="z8p7v4"
+Top_Customers =
+FILTER(Customers, Customers[Sales] > 50000)
+```
+
+### Explanation
+
+* Creates a new table containing customers with sales above 50000
+
+---
+
+# DAX Syntax
+
+## Column Reference
+
+```DAX id="1u4vcr"
+Sales[Amount]
+```
+
+## Table Reference
+
+```DAX id="gjlwmr"
+Sales
+```
+
+## Formula Example
+
+```DAX id="g2xj3v"
+Net_Profit =
+Sales[Revenue] - Sales[Expense]
+```
+
+---
+
+# DAX Operators
+
+## Arithmetic Operators
+
+| Operator | Meaning        |
+| -------- | -------------- |
+| +        | Addition       |
+| -        | Subtraction    |
+| *        | Multiplication |
+| /        | Division       |
+| ^        | Power          |
+
+### Example
+
+```DAX id="8qbj4q"
+Total = Sales[Price] * Sales[Quantity]
+```
+
+---
+
+## Comparison Operators
+
+| Operator | Meaning          |
+| -------- | ---------------- |
+| =        | Equal            |
+| >        | Greater Than     |
+| <        | Less Than        |
+| >=       | Greater or Equal |
+| <=       | Less or Equal    |
+| <>       | Not Equal        |
+
+---
+
+## Logical Operators
+
+| Operator | Meaning  |
+| -------- | -------- |
+| &&       | AND      |
+| ||       | OR       |
+| NOT      | Negation |
+
+---
+
+# Aggregate Functions
+
+Aggregate functions perform calculations on multiple rows.
+
+---
+
+## SUM
+
+Adds all values in a column.
+
+```DAX id="2l6vzm"
+TotalSales = SUM(Sales[Amount])
+```
+
+---
+
+## AVERAGE
+
+Returns average value.
+
+```DAX id="j3wzj2"
+AverageSales =
+AVERAGE(Sales[Amount])
+```
+
+---
+
+## COUNT
+
+Counts numeric values.
+
+```DAX id="s1jluq"
+ProductCount =
+COUNT(Products[ProductID])
+```
+
+---
+
+## DISTINCTCOUNT
+
+Counts unique values.
+
+```DAX id="49nnfd"
+UniqueCustomers =
+DISTINCTCOUNT(Sales[CustomerID])
+```
+
+---
+
+## MAX
+
+Returns highest value.
+
+```DAX id="jlwmd7"
+HighestSale =
+MAX(Sales[Amount])
+```
+
+---
+
+## MIN
+
+Returns smallest value.
+
+```DAX id="10g4od"
+LowestSale =
+MIN(Sales[Amount])
+```
+
+---
+
+# Logical Functions
+
+Logical functions are used for decision-making.
+
+---
+
+## IF Function
+
+### Syntax
+
+```DAX id="um6h3u"
+IF(condition, true_value, false_value)
+```
+
+### Example
+
+```DAX id="xtq60j"
+Status =
+IF(Sales[Amount] > 1000, "High", "Low")
+```
+
+---
+
+## AND Function
+
+Checks multiple conditions.
+
+```DAX id="9z9t5h"
+Result =
+AND(Sales[Amount] > 500, Sales[Quantity] > 5)
+```
+
+---
+
+## OR Function
+
+Checks whether at least one condition is true.
+
+```DAX id="w1vj8w"
+Result =
+OR(Sales[Amount] > 5000, Sales[Discount] > 20)
+```
+
+---
+
+## SWITCH Function
+
+Used instead of multiple IF statements.
+
+```DAX id="yu6fqf"
+Grade =
+SWITCH(
+TRUE(),
+Marks[Score] >= 90, "A",
+Marks[Score] >= 75, "B",
+Marks[Score] >= 50, "C",
+"Fail"
+)
+```
+
+---
+
+# Text Functions
+
+Text functions manipulate text values.
+
+---
+
+## CONCATENATE
+
+Joins text values.
+
+```DAX id="0eg7dq"
+FullName =
+CONCATENATE(
+Employees[FirstName],
+Employees[LastName]
+)
+```
+
+---
+
+## LEFT
+
+Returns left-side characters.
+
+```DAX id="k9tkwy"
+Code =
+LEFT(Product[Code], 3)
+```
+
+---
+
+## RIGHT
+
+Returns right-side characters.
+
+```DAX id="vkduh3"
+Code =
+RIGHT(Product[Code], 2)
+```
+
+---
+
+## MID
+
+Returns characters from middle.
+
+```DAX id="s9o70h"
+MiddleText =
+MID(Product[Code], 2, 4)
+```
+
+---
+
+## LEN
+
+Returns text length.
+
+```DAX id="3z0n85"
+Length =
+LEN(Employee[Name])
+```
+
+---
+
+## UPPER
+
+Converts text to uppercase.
+
+```DAX id="8d8uyg"
+UpperName =
+UPPER(Employee[Name])
+```
+
+---
+
+## LOWER
+
+Converts text to lowercase.
+
+```DAX id="gcx0yr"
+LowerName =
+LOWER(Employee[Name])
+```
+
+---
+
+# Date & Time Functions
+
+Used for date calculations and analysis.
+
+---
+
+## TODAY
+
+Returns current date.
+
+```DAX id="qx1k1u"
+TodayDate = TODAY()
+```
+
+---
+
+## NOW
+
+Returns current date and time.
+
+```DAX id="bwt95y"
+CurrentDateTime = NOW()
+```
+
+---
+
+## YEAR
+
+Returns year from date.
+
+```DAX id="1z90y5"
+Year =
+YEAR(Sales[OrderDate])
+```
+
+---
+
+## MONTH
+
+Returns month number.
+
+```DAX id="mup8j5"
+Month =
+MONTH(Sales[OrderDate])
+```
+
+---
+
+## DAY
+
+Returns day value.
+
+```DAX id="jlwmq1"
+Day =
+DAY(Sales[OrderDate])
+```
+
+---
+
+## DATEDIFF
+
+Calculates difference between dates.
+
+```DAX id="1hf53l"
+DaysDifference =
+DATEDIFF(
+Sales[StartDate],
+Sales[EndDate],
+DAY
+)
+```
+
+---
+
+# Filter Functions
+
+Filter functions control filter context.
+
+---
+
+## FILTER
+
+Returns filtered table.
+
+```DAX id="95zj2o"
+HighSales =
+FILTER(Sales, Sales[Amount] > 1000)
+```
+
+---
+
+## CALCULATE
+
+Changes filter context.
+
+```DAX id="0xqqxt"
+WestSales =
+CALCULATE(
+SUM(Sales[Amount]),
+Region[Name] = "West"
+)
+```
+
+### Explanation
+
+* Calculates sales only for West region
+
+---
+
+## ALL
+
+Removes filters.
+
+```DAX id="g8tv6i"
+TotalSales =
+CALCULATE(
+SUM(Sales[Amount]),
+ALL(Sales)
+)
+```
+
+---
+
+## VALUES
+
+Returns unique values.
+
+```DAX id="n2omdr"
+VALUES(Product[Category])
+```
+
+---
+
+## SELECTEDVALUE
+
+Returns selected value from slicer.
+
+```DAX id="gr8p4l"
+SelectedRegion =
+SELECTEDVALUE(Region[Name])
+```
+
+---
+
+# Time Intelligence Functions
+
+Time intelligence functions perform date-based calculations.
+
+## Requirements
+
+* Proper Date Table
+* Continuous dates
+* Relationship with fact table
+
+---
+
+# Creating Date Table
+
+```DAX id="jlwm4s"
+DateTable =
+CALENDAR(
+DATE(2024,1,1),
+DATE(2025,12,31)
+)
+```
+
+---
+
+## TOTALYTD
+
+Calculates Year-To-Date values.
+
+```DAX id="jlwmvh"
+YTD_Sales =
+TOTALYTD(
+SUM(Sales[Amount]),
+DateTable[Date]
+)
+```
+
+---
+
+## TOTALMTD
+
+Calculates Month-To-Date values.
+
+```DAX id="g5k5fi"
+MTD_Sales =
+TOTALMTD(
+SUM(Sales[Amount]),
+DateTable[Date]
+)
+```
+
+---
+
+## TOTALQTD
+
+Calculates Quarter-To-Date values.
+
+```DAX id="ezc4qj"
+QTD_Sales =
+TOTALQTD(
+SUM(Sales[Amount]),
+DateTable[Date]
+)
+```
+
+---
+
+## SAMEPERIODLASTYEAR
+
+Returns same period from previous year.
+
+```DAX id="jlwmji"
+LastYearSales =
+CALCULATE(
+SUM(Sales[Amount]),
+SAMEPERIODLASTYEAR(DateTable[Date])
+)
+```
+
+---
+
+## DATEADD
+
+Shifts dates forward or backward.
+
+```DAX id="fd6m9k"
+PreviousMonthSales =
+CALCULATE(
+SUM(Sales[Amount]),
+DATEADD(DateTable[Date], -1, MONTH)
+)
+```
+
+---
+
+# Variables in DAX
+
+## Definition
+
+Variables store temporary values inside formulas.
+
+Variables improve:
+
+* Readability
+* Performance
+* Formula management
+
+---
+
+## Syntax
+
+```DAX id="jlwmkn"
+VAR variable_name = value
+RETURN result
+```
+
+---
+
+## Example
+
+```DAX id="6tr6u6"
+NetProfit =
+VAR Revenue = SUM(Sales[Revenue])
+VAR Cost = SUM(Sales[Cost])
+
+RETURN Revenue - Cost
+```
+
+---
+
+## Benefits of Variables
+
+* Reduces repeated calculations
+* Makes formulas cleaner
+* Improves execution speed
+* Easier debugging
+
+---
+
+# Row Context and Filter Context
+
+## Row Context
+
+* Works row by row
+* Mostly used in Calculated Columns
+
+### Example
+
+```DAX id="jlwm1a"
+Tax =
+Sales[Amount] * 0.18
+```
+
+---
+
+## Filter Context
+
+* Applies filters dynamically
+* Mainly used in Measures
+
+### Example
+
+```DAX id="jlwm2b"
+WestSales =
+CALCULATE(
+SUM(Sales[Amount]),
+Region[Name] = "West"
+)
+```
+
+---
+
+# Best Practices for DAX
+
+## Use Measures Instead of Calculated Columns
+
+Measures improve performance and reduce memory usage.
+
+---
+
+## Use Variables
+
+Variables simplify complex formulas.
+
+---
+
+## Avoid Deep Nested IF Statements
+
+Use SWITCH for better readability.
+
+---
+
+## Use DIVIDE Instead of /
+
+DIVIDE prevents divide-by-zero errors.
+
+---
+
+## Create Proper Date Tables
+
+Important for Time Intelligence calculations.
+
+---
+
+# Advantages of DAX
+
+* Powerful analytical calculations
+* Dynamic reporting
+* Better business insights
+* Advanced filtering capabilities
+* Real-time data analysis
+
+---
+
+# Limitations of DAX
+
+* Complex for beginners
+* Difficult debugging in large formulas
+* Requires good data modeling knowledge
+* Performance issues with poorly optimized formulas
