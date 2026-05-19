@@ -1,0 +1,108 @@
+# Important DAX Functions
+## SUM
+
+The `SUM` function in DAX is used to add all numeric values from a column in a table. 
+It is one of the most basic and widely used aggregation functions in Power BI. 
+SUM works only with numerical data types such as integers, decimals, or currency values.
+Blank values are ignored automatically during the calculation process. This function is
+commonly used in business reports to calculate total sales, total profit, total quantity, and other financial values. 
+SUM helps users quickly analyze overall performance in dashboards and visualizations. It can also be combined with other
+DAX functions like CALCULATE and FILTER to perform advanced calculations. The function improves data summarization and 
+simplifies reporting tasks. Because of its simplicity and efficiency, SUM is frequently used in measures and calculated 
+columns. In Power BI, SUM plays an important role in creating KPIs and business metrics. It is highly useful in finance, sales, inventory,
+and accounting analysis where total values are required for decision-making and reporting purposes.
+
+```DAX id="a2s9yw"
+Total Sales = SUM(Sales[Amount])
+```
+
+---
+
+## AVERAGE
+
+The `AVERAGE` function in DAX is used to calculate the arithmetic mean of numeric values in a column. It adds all values and divides
+them by the number of non-blank entries. This function works only with numeric data types and automatically ignores blank values during 
+calculation. AVERAGE is commonly used in reports where performance analysis is required, such as average salary, average marks, average sales,
+or average customer ratings. It helps organizations understand trends and patterns in data. The function is simple to use and provides meaningful 
+insights into business performance. AVERAGE is widely used in statistical analysis and dashboard reporting because it gives a clear understanding 
+of central values in a dataset. It can also be combined with filters and conditions to calculate averages for specific categories or time periods.
+In Power BI, AVERAGE helps users make better business decisions by identifying typical performance values. It is especially useful in education, 
+finance, healthcare, and sales analysis where average-based comparisons are important.
+
+```DAX id="eqdzv5"
+Average Salary = AVERAGE(Employee[Salary])
+```
+
+---
+
+## COUNT
+
+The `COUNT` function in DAX is used to count the number of rows containing numeric values in a specific column. It ignores blank
+and non-numeric values automatically. COUNT is useful for analyzing records and understanding how many entries are available in a dataset. 
+This function is commonly used in attendance systems, product analysis, sales reports, and customer databases. It helps businesses measure 
+data volume and identify the number of valid records. COUNT works on a single column and is easy to implement in measures and calculated columns. 
+The function is important in data summarization because it provides quick numerical analysis for reports and dashboards. In Power BI, 
+COUNT helps users monitor transactions, orders, employees, and other business activities. It can also be combined with filters and logical 
+conditions to count records based on specific criteria. COUNT improves reporting accuracy and supports better data-driven decision-making processes 
+in organizations by providing meaningful statistical information about datasets.
+
+```DAX id="jvqyn4"
+Product Count = COUNT(Product[ProductID])
+```
+
+---
+
+## DISTINCTCOUNT
+
+The `DISTINCTCOUNT` function in DAX is used to count unique values in a column while ignoring duplicates. It is very useful in business
+intelligence and data analysis because organizations often need to know the number of unique customers, products, employees, or transactions. 
+DISTINCTCOUNT automatically removes repeated values and returns only the count of distinct entries. Blank values are counted once if they exist
+in the column. This function is commonly used in sales and marketing analysis to identify unique customers and measure customer engagement.
+It helps businesses understand reach, diversity, and uniqueness within data. DISTINCTCOUNT improves reporting accuracy because duplicate values
+do not affect the result. In Power BI, the function is widely used in dashboards and KPIs where unique counts are important for decision-making. 
+It can also be combined with CALCULATE and FILTER functions for advanced analysis. DISTINCTCOUNT provides valuable insights into customer behavior,
+product performance, and operational efficiency across different business domains.
+
+```DAX id="2qbvl6"
+Unique Customers = DISTINCTCOUNT(Sales[CustomerID])
+```
+
+---
+
+## IF
+
+The `IF` function in DAX is used to test a condition and return different values depending on whether the condition is true or false.
+It is one of the most important logical functions in Power BI and is commonly used for decision-making calculations. IF works similarly 
+to conditional statements in programming languages. Businesses use this function to categorize data, create labels, and perform conditional 
+analysis. For example, sales values can be classified as high or low depending on a target amount. The function improves report interactivity
+and helps create meaningful calculated columns and measures. IF can also be nested inside another IF function to handle multiple conditions, 
+although SWITCH is usually preferred for many conditions. In Power BI dashboards, IF helps users identify performance levels, employee status,
+grades, and customer categories. The function is easy to understand and widely used in finance, education, sales, and HR analysis.
+IF provides flexibility and improves the overall analytical capabilities of DAX formulas.
+
+```DAX id="7f7mls"
+Status = IF(Sales[Amount] > 5000, "High", "Low")
+```
+
+---
+
+## SWITCH
+
+The `SWITCH` function in DAX is used to evaluate multiple conditions and return corresponding results. It is considered a better alternative 
+to multiple nested IF statements because it makes formulas simpler, cleaner, and easier to read. SWITCH compares an expression against several 
+values and returns the matching result. This function is commonly used in grading systems, performance analysis, category mapping, and status
+reporting. In Power BI, SWITCH helps reduce formula complexity and improves maintainability of reports. It is especially useful when there are
+many conditions to evaluate. The function enhances readability and makes debugging easier for developers and analysts. SWITCH can also include a
+default value if no condition matches the expression. Businesses use this function to classify customers, products, employees, and sales performance 
+into different groups. It supports efficient business analysis and improves report organization. SWITCH is widely used in dashboards because it
+simplifies logic creation and enhances overall reporting quality in Power BI solutions.
+
+```DAX id="9y6z5m"
+Grade =
+SWITCH(
+    Student[Marks],
+    90, "A",
+    80, "B",
+    70, "C"
+)
+```
