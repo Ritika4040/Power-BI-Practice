@@ -1,0 +1,393 @@
+# Data Visualization Notes
+
+---
+
+# 1. Creating Charts
+
+* Charts are graphical representations of data.
+* Used to analyze and compare information.
+* Makes reports easy to understand.
+* Helps identify trends and patterns.
+* Widely used in Power BI and business analytics.
+
+Creating charts is an important part of data visualization. Charts convert raw data into visual formats that 
+are easier to interpret. Different chart types are used depending on the nature of data and analysis 
+requirements. Charts improve decision-making by presenting information clearly and attractively.
+
+### Example
+
+Sales Report using:
+
+* Bar Chart
+* Pie Chart
+* Line Chart
+
+---
+
+# 2. Bar Chart
+
+* Represents data using horizontal bars.
+* Used to compare categories.
+* Length of bars shows values.
+* Easy to read and analyze.
+* Suitable for large category names.
+
+A Bar Chart displays categorical data using rectangular horizontal bars. It helps compare different categories
+effectively. Larger values are represented with longer bars. Bar charts are commonly used in business
+reports and dashboards.
+
+### Example
+
+```id="m1wlyj"
+Product A = 50
+Product B = 80
+Product C = 30
+```
+
+---
+
+# 3. Column Chart
+
+* Uses vertical bars to represent data.
+* Compares values across categories.
+* Useful for time-based analysis.
+* Easy to identify highest and lowest values.
+
+A Column Chart displays data using vertical columns. It is one of the most commonly used visualizations for 
+comparing values between categories or across time periods. Column charts provide a simple and clear 
+presentation of numerical data.
+
+### Example
+
+```id="sy9i56"
+Jan = 200
+Feb = 350
+Mar = 500
+```
+
+---
+
+# 4. Line Chart
+
+* Displays data using connected lines.
+* Shows trends over time.
+* Useful for continuous data.
+* Helps analyze growth and decline.
+
+A Line Chart represents data points connected by straight lines. It is mainly used to visualize trends and 
+changes over time. Businesses use line charts to track sales, stock prices, and performance metrics.
+
+### Example
+
+```id="7mrrrx"
+2022 = 100
+2023 = 150
+2024 = 200
+```
+
+---
+
+# 5. Pie Chart
+
+* Circular chart divided into slices.
+* Shows percentage contribution.
+* Represents parts of a whole.
+* Best for limited categories.
+
+A Pie Chart visually represents proportional data using slices of a circle. Each slice shows the 
+contribution of a category to the total value. Pie charts are commonly used for percentage
+distribution analysis.
+
+### Example
+
+```id="jsjl1h"
+Marketing = 40%
+Sales = 35%
+HR = 25%
+```
+
+---
+
+# 6. Donut Chart
+
+* Similar to Pie Chart.
+* Contains empty center space.
+* Displays category contribution.
+* More visually attractive than pie chart.
+
+A Donut Chart is a modified version of a pie chart with a hole in the center. It represents percentage
+distribution while allowing additional information to be displayed in the center area.
+
+### Example
+
+```id="gbg1bm"
+Online Sales = 60%
+Offline Sales = 40%
+```
+
+---
+
+# 7. Area Chart
+
+* Similar to line chart.
+* Area below line is filled with color.
+* Shows magnitude of trends.
+* Useful for cumulative totals.
+
+An Area Chart displays quantitative data over time with filled areas below the line. It highlights 
+the volume or magnitude of values and helps compare multiple datasets effectively.
+
+### Example
+
+```id="3i6kxr"
+2021 = 50
+2022 = 100
+2023 = 150
+```
+
+---
+
+# 8. Scatter Plot
+
+* Displays relationship between variables.
+* Uses dots to represent data points.
+* Helps identify correlation.
+* Useful in statistical analysis.
+
+A Scatter Plot visualizes the relationship between two numerical variables. Data points are plotted
+on X and Y axes to identify trends, clusters, and outliers.
+
+### Example
+
+```id="7lv5oq"
+Height vs Weight
+Study Hours vs Marks
+```
+
+---
+
+# 9. Tree Map
+
+* Displays hierarchical data.
+* Uses rectangular boxes.
+* Box size represents value.
+* Efficient for large datasets.
+
+A Tree Map visualizes hierarchical data using nested rectangles. Larger rectangles represent higher
+values. It is useful for showing category-wise data distribution in a compact form.
+
+### Example
+
+```id="d24b4t"
+Electronics
+ ├── Mobile
+ ├── Laptop
+ └── TV
+```
+
+---
+
+# 10. Funnel Chart
+
+* Represents stages in a process.
+* Shape resembles a funnel.
+* Used in sales and marketing analysis.
+* Shows data reduction at each stage.
+
+A Funnel Chart visualizes progressive reduction through stages of a process. It helps businesses 
+analyze sales pipelines, recruitment processes, and customer conversions.
+
+### Example
+
+```id="weq9di"
+Visitors → Leads → Customers
+```
+
+---
+
+# 11. Gauge Chart
+
+* Displays performance against target.
+* Similar to speedometer.
+* Shows KPI progress visually.
+* Useful for monitoring metrics.
+
+A Gauge Chart measures performance levels within a range. It is commonly used in dashboards 
+to display KPIs, targets, and achievement percentages.
+
+### Example
+
+```id="j3dxnk"
+Target Sales = 1000
+Achieved = 750
+```
+
+---
+
+# 12. KPI Visual
+
+* KPI means Key Performance Indicator.
+* Displays business performance metrics.
+* Compares current and target values.
+* Helps monitor progress.
+
+KPI Visuals are used to track important business indicators such as revenue, profit, and customer 
+growth. They provide quick performance insights for decision-making.
+
+### Example
+
+```id="sp0tlf"
+Revenue Growth = +15%
+```
+
+---
+
+# 13. Table Visual
+
+* Displays data in rows and columns.
+* Used for detailed information.
+* Supports sorting and filtering.
+* Simple and structured format.
+
+A Table Visual presents data in tabular form. It is useful for displaying exact values 
+and detailed records in reports and dashboards.
+
+### Example
+
+```id="7h2dnv"
+Name   Sales
+A      500
+B      700
+```
+
+---
+
+# 14. Matrix Visual
+
+* Similar to pivot table.
+* Supports rows and columns grouping.
+* Displays summarized data.
+* Useful for multidimensional analysis.
+
+A Matrix Visual organizes data hierarchically and allows drill-down analysis. It helps 
+summarize complex datasets in an easy-to-read format.
+
+### Example
+
+```id="b2q9m5"
+Region → Product → Sales
+```
+
+---
+
+# 15. Maps and Filled Maps
+
+* Visualize geographical data.
+* Uses maps for location analysis.
+* Filled maps highlight regions.
+* Useful for regional comparisons.
+
+Maps and Filled Maps help display data geographically. Businesses use them for sales analysis,
+customer distribution, and regional performance tracking.
+
+### Example
+
+```id="00h6ho"
+India Sales by State
+```
+
+---
+
+# 16. Cards and Multi-row Cards
+
+* Display important values clearly.
+* Card shows single value.
+* Multi-row card shows multiple values.
+* Used in dashboards.
+
+Cards provide quick summaries of important metrics like total sales or profit. Multi-row 
+cards display multiple related values together.
+
+### Example
+
+```id="ujz44x"
+Total Sales = 5000
+Profit = 1200
+```
+
+---
+
+# 17. Slicers
+
+* Interactive filtering tool.
+* Filters report visuals dynamically.
+* Improves user experience.
+* Easy data selection.
+
+Slicers allow users to filter report data interactively. They help users focus on 
+specific categories, dates, or regions within dashboards.
+
+### Example
+
+```id="7rbn77"
+Filter by:
+- Year
+- Region
+- Product
+```
+
+---
+
+# 18. Drill Down and Drill Through
+
+* Drill Down shows detailed levels of data.
+* Drill Through navigates to detailed pages.
+* Improves data exploration.
+* Interactive reporting feature.
+
+Drill features allow users to move from summarized data to detailed analysis. They help 
+explore data hierarchies and improve report interactivity.
+
+### Example
+
+```id="1gx3h0"
+Country → State → City
+```
+
+---
+
+# 19. Tooltips
+
+* Small popup information boxes.
+* Appear when hovering over visuals.
+* Provide additional details.
+* Improves readability.
+
+Tooltips display extra information about data points without cluttering the visual. 
+They enhance report usability and user interaction.
+
+### Example
+
+```id="xrn4w4"
+Sales = 500
+Profit = 120
+```
+
+---
+
+# 20. Conditional Formatting
+
+* Formats visuals based on conditions.
+* Changes color, icons, or data bars.
+* Highlights important values.
+* Improves report visualization.
+
+Conditional Formatting automatically applies styles based on rules or thresholds. 
+It helps identify high and low values quickly in reports.
+
+### Example
+
+```id="n8r0q7"
+Profit > 1000 → Green
+Profit < 500 → Red
+```
