@@ -1,0 +1,282 @@
+# **Dashboard and Reports in Power BI**
+
+---
+
+# **1. Creating Reports**
+
+A report in Power BI is a collection of visualizations created from a dataset. 
+Reports help users analyze and understand business data through charts, graphs,
+tables, maps, and KPIs. A report can contain multiple pages, and each page can 
+have different visuals. Reports are interactive, meaning users can filter, 
+sort, and drill into data. Power BI reports are mainly used for business analysis, 
+decision-making, and performance tracking. Reports are created in Power BI 
+Desktop using drag-and-drop features.
+
+### Example
+
+A sales report may contain:
+
+* Bar chart for product sales
+* Pie chart for regional sales
+* KPI card for total revenue
+* Table for customer details
+
+Example:
+
+```id="1"
+Total Sales = ₹5,00,000
+Top Product = Laptop
+```
+
+---
+
+# **2. Creating Dashboards**
+
+A dashboard is a single-page visual interface that displays important business metrics and insights.
+Dashboards are created in Power BI Service by pinning visuals from reports. Unlike reports, 
+dashboards provide a quick summary of important information in one place. Dashboards help 
+managers and executives monitor business performance in real time. They support live 
+data updates and allow easy sharing among teams.
+
+### Example
+
+A company dashboard may show:
+
+* Total Sales
+* Monthly Profit
+* Customer Growth
+* Revenue Trend
+
+Example:
+
+```id="2"
+Monthly Profit = ₹1,20,000
+```
+
+Dashboard visuals are called **tiles**.
+
+---
+
+# **3. Interactive Reports**
+
+Interactive reports allow users to interact with data dynamically. Users can click visuals,
+apply filters, use slicers, and drill down into detailed information. Interactivity makes
+reports more powerful and user-friendly. When one chart is selected, other charts automatically 
+update according to the selected data. Interactive reports improve data analysis and 
+decision-making.
+
+### Example
+
+If a user clicks:
+
+```id="3"
+Region = North India
+```
+
+Then all charts update to show only North India data.
+
+Features:
+
+* Drill Down
+* Drill Through
+* Cross Filtering
+* Slicers
+
+---
+
+# **4. Bookmarks**
+
+Bookmarks in Power BI save the current state of a report page, including filters, slicers, 
+and visual visibility. They are used to create guided navigation and storytelling in 
+reports. Bookmarks help users quickly switch between different report views. They
+are commonly used in interactive dashboards and presentations.
+
+### Example
+
+Bookmark 1:
+
+```id="4"
+Sales Overview
+```
+
+Bookmark 2:
+
+```id="5"
+Customer Analysis
+```
+
+Users can switch between views with one click.
+
+---
+
+# **5. Buttons**
+
+Buttons are clickable objects used for navigation and interaction in Power BI reports.
+Buttons improve report usability and help users move between pages or trigger actions.
+Different button types include back buttons, bookmark buttons, page navigation 
+buttons, and reset buttons.
+
+### Example
+
+A button labeled:
+
+```id="6"
+Go to Dashboard
+```
+
+When clicked:
+
+* Opens dashboard page
+* Navigates to another report page
+
+Types of buttons:
+
+* Back Button
+* Home Button
+* Bookmark Button
+* Reset Filter Button
+
+---
+
+# **6. Page Navigation**
+
+Page Navigation allows users to move between report pages easily. Navigation improves report 
+organization and user experience. Power BI provides built-in navigation buttons and menus for
+switching between pages. This feature is useful in reports with multiple pages and sections.
+
+### Example
+
+Pages:
+
+```id="7"
+Page 1 → Sales
+Page 2 → Profit
+Page 3 → Customers
+```
+
+Navigation button:
+
+```id="8"
+Next Page
+```
+
+Moves user to another report page.
+
+---
+
+# **7. Themes**
+
+Themes are predefined color and style settings used to change the appearance of Power BI reports.
+Themes help maintain consistent design and branding across reports. A theme controls colors, 
+fonts, background styles, and visual formatting. Power BI provides built-in themes, and
+users can also create custom themes using JSON files.
+
+### Example
+
+Theme settings:
+
+```id="9"
+Primary Color = Blue
+Font = Arial
+```
+
+Benefits:
+
+* Professional appearance
+* Consistent design
+* Better readability
+
+---
+
+# **8. Report Formatting**
+
+Report formatting improves the visual appearance and readability of reports. Formatting 
+includes changing colors, fonts, titles, borders, backgrounds, and alignment. Proper 
+formatting helps users understand information clearly. Good formatting also 
+improves dashboard presentation and business reporting standards.
+
+### Example
+
+Formatting options:
+
+* Change chart color
+* Increase font size
+* Add chart title
+* Add data labels
+
+Example:
+
+```id="10"
+Title = Monthly Sales Report
+```
+
+---
+
+# **9. Custom Visuals**
+
+Custom visuals are additional charts and visuals imported from the Power BI marketplace. 
+These visuals provide advanced visualization features not available in default Power
+BI visuals. Custom visuals help create more attractive and informative reports. 
+Developers can also build their own custom visuals using Power BI SDK.
+
+### Example
+
+Popular custom visuals:
+
+* Word Cloud
+* Sankey Chart
+* Gantt Chart
+* Radar Chart
+
+Example:
+
+```id="11"
+Gantt Chart → Project Timeline
+```
+
+---
+
+# **10. Publish Reports**
+
+Publishing reports means uploading Power BI reports from Power BI Desktop to Power BI Service.
+Published reports can be shared online with teams and organizations. Publishing enables cloud
+access, collaboration, dashboard creation, and scheduled data refresh. Users can access 
+reports through web browsers and mobile apps.
+
+### Example
+
+Steps:
+
+```id="12"
+1. Create report
+2. Save report
+3. Click Publish
+4. Select Workspace
+```
+
+After publishing:
+
+* Reports become online accessible
+* Dashboards can be created
+* Reports can be shared with users
+
+---
+
+# **Advantages of Dashboards and Reports**
+
+* Better business analysis
+* Real-time monitoring
+* Easy data visualization
+* Interactive decision making
+* Professional reporting
+* Cloud sharing support
+
+---
+
+# **Conclusion**
+
+Dashboards and reports are important features of Power BI used for data visualization and
+business intelligence. Reports provide detailed analysis, while dashboards give summarized 
+insights. Features like bookmarks, buttons, themes, and interactive visuals improve usability 
+and presentation. Power BI helps organizations transform raw data into meaningful 
+information for better decision-making.
