@@ -1,0 +1,195 @@
+## 11. Advanced Power BI
+
+### 1. Advanced DAX
+
+Advanced DAX (Data Analysis Expressions) includes complex formulas and calculations used for advanced data analysis in
+Power BI. It helps create calculated columns, measures, and custom calculations beyond basic functions. Advanced 
+DAX includes time intelligence functions, filter functions, ranking functions, and statistical calculations. It
+enables users to perform dynamic calculations based on report filters and user interactions. DAX is powerful for
+creating business metrics and KPIs. Advanced DAX also supports logical operations, variable creation, and context 
+modifications. It helps organizations perform deeper analysis and create interactive reports with intelligent 
+calculations.
+
+**Common Advanced DAX Functions:**
+
+* CALCULATE()
+* FILTER()
+* ALL()
+* RANKX()
+* TOTALYTD()
+* SAMEPERIODLASTYEAR()
+* VAR
+* RETURN
+
+**Example:**
+
+```DAX
+Total Sales YTD =
+TOTALYTD(SUM(Sales[Amount]), Calendar[Date])
+```
+
+---
+
+### 2. Performance Optimization
+
+Performance optimization improves the speed and efficiency of Power BI reports and dashboards. Slow reports can affect user 
+experience and increase loading time. Optimization techniques reduce memory usage and improve query performance. It helps
+increase responsiveness and minimizes unnecessary processing. Large datasets and complex calculations can negatively impact
+report performance. Proper optimization improves system stability and creates a better user experience. Organizations 
+apply optimization techniques to ensure reports load faster and work smoothly even with large amounts of data.
+
+**Methods of Optimization:**
+
+* Remove unnecessary columns
+* Reduce dataset size
+* Use star schema design
+* Avoid complex calculations
+* Use aggregations
+* Reduce visual count
+* Optimize DAX formulas
+
+**Example:**
+Instead of creating multiple calculated columns, use measures because they consume less memory.
+
+---
+
+### 3. Query Folding
+
+Query Folding is the process where Power Query sends data transformation steps back to the source database instead of
+processing them locally. This reduces processing load and improves refresh performance. Not all transformations 
+support query folding. Power BI tries to push operations like filtering and sorting to the source system. Query 
+folding reduces memory consumption and improves refresh efficiency. It helps process large amounts of data faster by
+using the power of database servers rather than Power BI resources.
+
+**Advantages:**
+
+* Faster refresh
+* Reduced memory usage
+* Better performance
+* Less processing in Power BI
+
+**Example:**
+
+```SQL
+SELECT * FROM Sales
+WHERE Amount > 1000
+```
+
+---
+
+### 4. Incremental Refresh
+
+Incremental Refresh updates only newly added or modified data instead of refreshing the entire dataset. This significantly
+reduces refresh time for large datasets. It is commonly used in large business systems where data changes frequently.
+Incremental refresh improves system efficiency because old records are not repeatedly processed. It minimizes server 
+workload and reduces system resource consumption. Organizations use this feature for handling continuously growing 
+datasets and maintaining updated business reports.
+
+**Benefits:**
+
+* Faster refresh
+* Lower resource usage
+* Better performance
+* Reduced refresh failures
+
+**Example:**
+If a database contains 10 years of sales data, Power BI refreshes only the last month's records.
+
+---
+
+### 5. Composite Models
+
+Composite Models allow combining different storage modes and data sources in one model. Users can mix Import mode and
+DirectQuery mode together. This provides flexibility and supports large-scale analytics. Composite models allow
+businesses to work with both historical and real-time data. They improve scalability and provide efficient management 
+of multiple data sources. Organizations can build more dynamic reporting systems using composite models.
+
+**Storage Modes:**
+
+* Import
+* DirectQuery
+* Dual Mode
+
+**Example:**
+Sales data is imported while live customer data uses DirectQuery.
+
+---
+
+### 6. Aggregations
+
+Aggregations improve performance by storing summarized data instead of detailed records. Power BI queries summarized 
+tables first, reducing processing time. Aggregations are useful for handling large datasets. They reduce the number of
+calculations required and improve report loading speed. Aggregations help reduce resource consumption and improve 
+overall report responsiveness. Organizations use aggregation techniques for faster reporting and better business 
+intelligence solutions.
+
+**Types of Aggregations:**
+
+* Sum
+* Count
+* Average
+* Minimum
+* Maximum
+
+**Example:**
+Instead of storing every sales transaction, monthly sales totals are stored.
+
+---
+
+### 7. AI Visuals
+
+AI Visuals use Artificial Intelligence capabilities within Power BI to provide advanced insights automatically. These 
+visuals help users identify patterns and trends without writing complex code. AI visuals simplify data analysis and 
+improve decision-making. They can automatically identify hidden relationships and unusual patterns within data.
+Businesses use AI visuals for predictive analysis and discovering insights that may be difficult to identify
+manually.
+
+**Types of AI Visuals:**
+
+* Key Influencers
+* Decomposition Tree
+* Q&A Visual
+* Smart Narrative
+* Anomaly Detection
+
+**Example:**
+Key Influencers identifies factors affecting sales performance.
+
+---
+
+### 8. Paginated Reports
+
+Paginated Reports are designed for printing and creating highly formatted documents. They display complete datasets 
+across multiple pages with exact formatting. These reports are ideal for invoices and financial reports. Paginated
+reports provide highly structured document layouts and support detailed information presentation. Businesses use 
+them when exact formatting and professional document appearance are necessary.
+
+**Features:**
+
+* Pixel-perfect formatting
+* Multi-page reports
+* Export to PDF and Excel
+* Supports tables and charts
+
+**Example:**
+Generating customer invoices for monthly billing.
+
+---
+
+### 9. Power BI Embedded
+
+Power BI Embedded allows developers to integrate Power BI reports and dashboards into custom applications and
+websites. Users can view analytics directly inside applications without opening Power BI separately. This improves 
+user experience and provides seamless access to business insights. Embedded analytics helps organizations create 
+customized applications with interactive reporting features. It also supports secure access and scalable
+deployment for enterprise applications.
+
+**Advantages:**
+
+* Custom application integration
+* Interactive analytics
+* Secure report access
+* Scalable deployment
+
+**Example:**
+An e-commerce website displays sales analytics within its admin dashboard.
