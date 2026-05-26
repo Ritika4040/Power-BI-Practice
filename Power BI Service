@@ -1,0 +1,109 @@
+## Power BI Service
+
+### 1. Workspace
+
+A Workspace in Power BI Service is a collaborative environment where users can create, manage, and organize reports,
+dashboards, datasets, and dataflows. It allows multiple team members to work together on the same project. Workspaces
+provide role-based permissions such as Admin, Member, Contributor, and Viewer. They help organizations separate projects
+and maintain security. Users can publish Power BI content from Power BI Desktop directly into a workspace.
+
+**Example:**
+A sales team creates a workspace named "Sales Analysis" where all sales reports are stored.
+
+---
+
+### 2. Dataflows
+
+Dataflows are collections of data preparation processes used in Power BI Service. They help extract, transform, and
+load (ETL) data from different sources into reusable datasets. Dataflows use Power Query for transforming data and 
+can be shared across multiple reports. This reduces repeated work and improves efficiency. Data is stored in cloud
+storage for easy access.
+
+**Example:**
+A company creates a customer dataflow and uses it in multiple reports.
+
+---
+
+### 3. Datasets
+
+A Dataset is a collection of data imported or connected to Power BI. It acts as the data source for reports and dashboards. 
+Datasets contain tables, relationships, calculations, and measures. Users can create multiple reports from a single dataset.
+They support scheduled refresh for updated information.
+
+**Example:**
+A sales dataset contains customer, product, and sales transaction tables.
+
+---
+
+### 4. Reports
+
+Reports are collections of visualizations created using datasets in Power BI. They can contain charts, graphs, maps, tables, 
+and filters spread across multiple pages. Reports help users analyze business data interactively. Users can drill down and 
+apply filters to view detailed information.
+
+**Example:**
+A report shows monthly sales performance using charts and graphs.
+
+---
+
+### 5. Dashboards
+
+Dashboards are single-page visual summaries that combine important visuals from one or multiple reports. They provide a quick
+overview of business performance. Dashboards can display real-time data and key metrics. Users can pin report visuals to 
+dashboards for easy monitoring.
+
+**Example:**
+A dashboard displays total revenue, profit, and sales growth KPIs.
+
+---
+
+### 6. Sharing Reports
+
+Power BI allows users to share reports with others inside or outside an organization. Shared reports help team members collaborate 
+and access insights. Permissions control who can view or edit reports. Users can share through email links or workspaces.
+
+**Example:**
+A manager shares a sales report with team members.
+
+---
+
+### 7. Collaboration
+
+Collaboration in Power BI enables multiple users to work together on reports and dashboards. Team members can comment, edit, and
+share content. Workspaces support collaboration by assigning different roles to users. Collaboration improves productivity 
+and decision-making.
+
+**Example:**
+Marketing and sales teams work together on a business analysis report.
+
+---
+
+### 8. Scheduled Refresh
+
+Scheduled Refresh automatically updates datasets at specific intervals. It ensures reports and dashboards always display the
+latest data. Users can configure refresh frequency such as daily or weekly. This reduces manual updates and improves 
+accuracy.
+
+**Example:**
+A report refreshes every day at 9 AM automatically.
+
+---
+
+### 9. Gateway Configuration
+
+A Gateway connects on-premises data sources to Power BI Service. It securely transfers data between local databases and 
+the cloud. Gateways are necessary for scheduled refresh and live connections. There are Personal Gateway and Standard 
+Gateway options.
+
+**Example:**
+A company database on a local server connects to Power BI using a gateway.
+
+---
+
+### 10. Row-Level Security (RLS)
+
+Row-Level Security restricts users from viewing unauthorized data. It applies filters at the row level within datasets.
+Different users can see different data based on assigned roles. RLS improves data security and privacy.
+
+**Example:**
+A regional manager sees only data related to their own region.
