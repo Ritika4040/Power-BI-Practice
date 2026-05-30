@@ -1,0 +1,291 @@
+# Interview Questions – Power BI
+
+## Basic Power BI Questions
+
+### What is Power BI?
+
+Power BI is a business intelligence and data visualization tool developed by Microsoft. It helps users connect to different data sources,
+transform data, create reports, dashboards, and share insights.
+
+### What are the main components of Power BI?
+
+The main components are:
+
+* Power BI Desktop
+* Power BI Service
+* Power BI Mobile App
+* Power Query
+* Power Pivot
+* Power BI Gateway
+
+### What is the difference between a Report and a Dashboard?
+
+A report is a collection of visualizations spread across multiple pages, while a dashboard is a single-page view containing important
+visuals from one or more reports.
+
+### What is Power Query?
+
+Power Query is a data transformation tool used to clean, shape, and prepare data before loading it into Power BI.
+
+### What is a Data Model?
+
+A data model defines relationships between tables and helps users analyze data efficiently.
+
+### What are Fact Tables and Dimension Tables?
+
+* Fact Table: Contains measurable business data such as sales and profit.
+* Dimension Table: Contains descriptive information such as customer, product, and date details.
+
+### What is a Gateway in Power BI?
+
+A Gateway enables secure data transfer between on-premises data sources and Power BI Service.
+
+### What is Import Mode?
+
+Import Mode loads data into Power BI memory, providing faster performance.
+
+### What is DirectQuery?
+
+DirectQuery keeps data in the source system and retrieves data whenever a report is queried.
+
+### What is Incremental Refresh?
+
+Incremental Refresh updates only new or changed data instead of refreshing the entire dataset.
+
+---
+
+# DAX Interview Questions
+
+### What is DAX?
+
+DAX (Data Analysis Expressions) is a formula language used in Power BI to create calculations, measures, and calculated columns.
+
+### What is the difference between a Measure and a Calculated Column?
+
+**Measure**
+
+* Calculated dynamically.
+* Uses less memory.
+* Calculated during report interaction.
+
+**Calculated Column**
+
+* Calculated during data refresh.
+* Stored in memory.
+* Increases model size.
+
+### What is the SUM Function?
+
+```DAX
+Total Sales = SUM(Sales[Amount])
+```
+
+Returns the total of a numeric column.
+
+### What is CALCULATE Function?
+
+```DAX
+Sales West = CALCULATE(SUM(Sales[Amount]), Sales[Region]="West")
+```
+
+Modifies filter context and evaluates an expression.
+
+### What is FILTER Function?
+
+```DAX
+FILTER(Sales, Sales[Amount] > 1000)
+```
+
+Returns rows matching a condition.
+
+### What is DISTINCTCOUNT?
+
+```DAX
+Customers = DISTINCTCOUNT(Sales[CustomerID])
+```
+
+Counts unique values in a column.
+
+### What is ALL Function?
+
+```DAX
+Total Sales = CALCULATE(SUM(Sales[Amount]), ALL(Sales))
+```
+
+Removes filters from a table or column.
+
+### What is RELATED Function?
+
+```DAX
+RELATED(Customer[Customer Name])
+```
+
+Retrieves a value from a related table.
+
+### What is Context in DAX?
+
+* Row Context: Current row being evaluated.
+* Filter Context: Filters applied to data during calculation.
+
+### What is Time Intelligence in DAX?
+
+Time intelligence functions perform calculations based on dates.
+
+Examples:
+
+* TOTALYTD()
+* TOTALMTD()
+* SAMEPERIODLASTYEAR()
+* DATEADD()
+
+---
+
+# Scenario-Based Questions
+
+### A report is loading very slowly. What would you do?
+
+Answer:
+
+* Remove unnecessary columns.
+* Reduce visual count.
+* Optimize DAX measures.
+* Use Star Schema.
+* Enable Incremental Refresh.
+* Aggregate data where possible.
+
+### Data is not refreshing in Power BI Service. What could be the reason?
+
+Answer:
+
+* Gateway is offline.
+* Invalid credentials.
+* Source server unavailable.
+* Refresh schedule issues.
+* Network connectivity problems.
+
+### Users need to see only their own data. How would you implement this?
+
+Answer:
+Use Row-Level Security (RLS) by creating roles and filtering data based on user identity.
+
+### You have duplicate records in a dataset. How would you handle them?
+
+Answer:
+Use Power Query's Remove Duplicates feature before loading data.
+
+### Sales data needs to be compared with the previous year. How would you do it?
+
+Answer:
+Use Time Intelligence DAX functions such as:
+
+```DAX
+Previous Year Sales =
+CALCULATE(
+    SUM(Sales[Amount]),
+    SAMEPERIODLASTYEAR(Date[Date])
+)
+```
+
+### Multiple tables have performance issues. What modeling technique would you use?
+
+Answer:
+Implement a Star Schema with proper relationships and reduce unnecessary joins.
+
+### How would you handle large datasets?
+
+Answer:
+
+* Incremental Refresh
+* Aggregation Tables
+* DirectQuery
+* Data Reduction
+* Optimized DAX
+
+---
+
+# Dashboard Design Questions
+
+### What makes a good dashboard?
+
+A good dashboard should be:
+
+* Simple
+* Interactive
+* Easy to understand
+* Visually appealing
+* Performance optimized
+
+### What KPIs would you place at the top of a dashboard?
+
+Common KPIs:
+
+* Total Sales
+* Profit
+* Revenue
+* Customer Count
+* Growth Percentage
+
+### How do you choose the right visualization?
+
+* Bar Chart → Comparison
+* Line Chart → Trends
+* Pie Chart → Percentage Distribution
+* Map → Geographic Analysis
+* Table → Detailed Information
+
+### What is Drill Down?
+
+Drill Down allows users to move from summarized data to detailed levels.
+
+Example:
+Year → Quarter → Month → Day
+
+### What is Drill Through?
+
+Drill Through navigates to another report page containing detailed information for a selected value.
+
+### What are Bookmarks?
+
+Bookmarks save the current state of a report, including filters and visual settings.
+
+### Why are slicers used?
+
+Slicers provide interactive filtering for report users.
+
+### How would you improve dashboard performance?
+
+* Reduce visual count.
+* Optimize DAX.
+* Remove unused columns.
+* Use aggregations.
+* Avoid complex calculations.
+* Use Star Schema.
+
+### What is the difference between a KPI Visual and a Card Visual?
+
+**Card Visual**
+
+* Displays a single value.
+
+**KPI Visual**
+
+* Displays a value along with trend and target comparison.
+
+### What are the best practices for dashboard design?
+
+* Keep important KPIs at the top.
+* Use consistent colors and formatting.
+* Avoid clutter.
+* Use meaningful titles.
+* Limit visuals per page.
+* Ensure fast performance.
+* Focus on business objectives.
+
+## Frequently Asked Interview Question
+
+**Q: Why should we hire you for a Power BI role?**
+
+**Answer:**
+"I have knowledge of Power BI, Power Query, DAX, Data Modeling, Dashboard Development, and Report Optimization. I can transform raw data into meaningful 
+insights, create interactive dashboards, and help organizations make data-driven decisions. I am continuously learning advanced Power BI concepts 
+and business intelligence best practices."
