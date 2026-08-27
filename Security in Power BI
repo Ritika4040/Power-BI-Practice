@@ -43,7 +43,6 @@ Limitations:
 • Users who lack access see an error if a visual references hidden objects
 
 Workspace Roles
-
 Workspaces are containers for dashboards, reports, datasets, and dataflows. Access is controlled through four built-in roles:
 
 | Role | Permissions |
@@ -59,7 +58,6 @@ Best practices:
 • Separate development and production workspaces
 
 Dataset Permissions
-
 Dataset permissions control who can connect to and build on a dataset, independent of workspace roles.
 
 Permission types:
