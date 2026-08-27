@@ -5,4 +5,4 @@ It connects to various data sources and transforms raw data into interactive das
 Introduction to Power BI:
 Power BI is a business analytics tool by Microsoft. 
 It helps to visualize data, share insights, and make data-driven decisions.
-It connects to multiple data sources (Excel, SQL, Azure, etc.).  
+It connects to multiple data sources (Excel, SQL, Azure, etc.).   
