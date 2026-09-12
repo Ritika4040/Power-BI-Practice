@@ -1,0 +1,313 @@
+Power BI Interview Questions & Answers
+1. What is Power BI?
+
+Answer:
+Power BI is a business intelligence and data visualization tool developed by Microsoft. It helps us connect to different data sources, clean and 
+transform data, analyze it, and create interactive reports and dashboards.
+
+2. What are the main components of Power BI?
+
+Answer:
+The main components are:
+
+Power BI Desktop – used to create reports.
+Power BI Service – used to publish, share, and collaborate on reports.
+Power BI Mobile – used to view reports on mobile devices.
+Power Query – used for data cleaning and transformation.
+DAX – used for calculations and measures.
+3. What is Power Query?
+
+Answer:
+Power Query is used to connect to data sources and clean or transform the data before loading it into Power BI. For example, we can remove duplicates, 
+handle missing values, change data types, merge tables, and filter rows.
+
+4. What is DAX?
+
+Answer:
+DAX stands for Data Analysis Expressions. It is a formula language used in Power BI to create calculations such as measures, calculated columns, totals, 
+percentages, and year-over-year growth.
+
+Example:
+
+Total Sales = SUM(Sales[SalesAmount])
+5. What is the difference between Power Query and DAX?
+
+Answer:
+Power Query is mainly used for cleaning and transforming data before loading it into the model. DAX is mainly used for calculations and analysis after 
+the data has been loaded.
+
+A simple way to remember it is:
+Power Query = prepare the data
+DAX = analyze the data
+
+6. What is a Power BI dashboard?
+
+Answer:
+A dashboard is a single-page view containing important visualizations and KPIs. It gives users a quick overview of business performance.
+
+7. What is the difference between a report and a dashboard?
+
+Answer:
+A report can contain multiple pages and many detailed visualizations. A dashboard is generally a single-page summary of important information and KPIs.
+
+8. What is a visualization in Power BI?
+
+Answer:
+A visualization is a graphical representation of data. Examples include bar charts, line charts, pie charts, tables, cards, maps, and scatter charts.
+
+9. What is data modeling?
+
+Answer:
+Data modeling means creating a proper structure between different tables so that Power BI can analyze the data correctly. It includes defining 
+relationships, keys, and the appropriate fact and dimension tables.
+
+10. What is a relationship in Power BI?
+
+Answer:
+A relationship connects two tables using a common column. For example, a CustomerID column can connect a Customer table with a Sales table.
+
+11. What is a star schema?
+
+Answer:
+A star schema is a data model where a central fact table is connected to multiple dimension tables.
+
+For example:
+
+Sales Fact → Customer, Product, Date, Region
+
+It is commonly preferred because it makes the model easier to understand and can improve performance.
+
+12. What is a fact table?
+
+Answer:
+A fact table contains measurable business data or transactions.
+
+For example, a Sales table might contain:
+
+Sales Amount
+Quantity
+Discount
+Customer ID
+Product ID
+Date ID
+13. What is a dimension table?
+
+Answer:
+A dimension table contains descriptive information used to analyze the facts.
+
+For example, a Product table might contain:
+
+Product ID
+Product Name
+Category
+Brand
+Price
+14. What is the difference between a measure and a calculated column?
+
+Answer:
+A calculated column is calculated for each row and stored in the model. A measure is calculated dynamically based on the filters and context in the report.
+
+For example:
+
+Total Sales = SUM(Sales[Amount])
+
+I would generally use a measure for aggregations and report-level calculations.
+
+15. What is CALCULATE() in DAX?
+
+Answer:
+CALCULATE() is one of the most important DAX functions. It evaluates an expression after modifying the filter context.
+
+For example:
+
+Total Sales = SUM(Sales[Amount])
+
+Online Sales =
+CALCULATE(
+    [Total Sales],
+    Sales[Channel] = "Online"
+)
+
+Here, CALCULATE() calculates sales only for the Online channel.
+
+16. What is filter context?
+
+Answer:
+Filter context is the set of filters applied to a calculation. These filters can come from slicers, visualizations, rows, columns, or DAX expressions.
+
+For example, if I select 2026 and Bangalore in slicers, a sales measure will calculate sales only for that year and location.
+
+17. What is row context?
+
+Answer:
+Row context means that DAX is evaluating an expression for the current row. It is commonly seen when working with calculated columns and iterator 
+functions such as SUMX().
+
+18. What is the difference between SUM() and SUMX()?
+
+Answer:
+SUM() simply adds values from a column.
+
+Total Sales = SUM(Sales[Amount])
+
+SUMX() evaluates an expression row by row and then adds the results.
+
+Total Revenue =
+SUMX(Sales, Sales[Quantity] * Sales[Price])
+
+I use SUMX() when I need a calculation for each row before getting the total.
+
+19. What is the difference between Merge and Append?
+
+Answer:
+
+Merge combines tables horizontally based on a common column, similar to a SQL JOIN.
+
+Append combines tables vertically by adding rows from one table below another.
+
+For example:
+
+Merge → Customer table + Customer Details
+Append → January Sales + February Sales
+20. How do you handle missing values in Power BI?
+
+Answer:
+First, I would understand why the values are missing. Depending on the situation, I might replace them, remove the rows, fill values from previous or 
+next records, or leave them blank if the missing value has business meaning.
+
+I would avoid blindly replacing every blank with zero.
+
+21. How do you remove duplicate records?
+
+Answer:
+I usually handle duplicates in Power Query. I select the appropriate column or combination of columns and use Remove Duplicates.
+
+Before removing them, I would confirm whether they are actually duplicates or legitimate repeated transactions.
+
+22. What is Import mode?
+
+Answer:
+Import mode loads data into Power BI's in-memory engine. It generally provides fast report performance, but the data needs to be refreshed to get the 
+latest source data.
+
+23. What is DirectQuery?
+
+Answer:
+DirectQuery doesn't import the entire dataset into Power BI. Instead, Power BI sends queries to the underlying database when users interact with the report.
+
+It can be useful for very large or frequently changing datasets, although performance depends heavily on the source database.
+
+24. What is Row-Level Security (RLS)?
+
+Answer:
+Row-Level Security controls which rows of data a particular user can see.
+
+For example, a regional manager might only be allowed to see sales data for their own region.
+
+25. What is a slicer?
+
+Answer:
+A slicer is an interactive filtering control. Users can select values such as year, region, product, or department, and the report visuals update accordingly.
+
+26. How would you calculate total sales?
+
+Answer:
+
+Total Sales = SUM(Sales[SalesAmount])
+
+Then I can use this measure in cards, charts, tables, or other visuals.
+
+27. How would you calculate profit?
+
+Answer:
+
+Profit = SUM(Sales[SalesAmount]) - SUM(Sales[Cost])
+
+This gives the total profit based on sales and cost.
+
+28. How would you calculate profit margin?
+
+Answer:
+
+Profit Margin =
+DIVIDE([Profit], [Total Sales], 0)
+
+I prefer DIVIDE() because it safely handles situations where the denominator is zero.
+
+29. How would you calculate Year-over-Year growth?
+
+Answer:
+
+YoY Growth =
+DIVIDE(
+    [Total Sales] - [Previous Year Sales],
+    [Previous Year Sales],
+    0
+)
+
+I would also make sure that I have a proper Date table connected to the sales data.
+
+30. How would you calculate previous year's sales?
+
+Answer:
+
+Previous Year Sales =
+CALCULATE(
+    [Total Sales],
+    SAMEPERIODLASTYEAR('Date'[Date])
+)
+
+This allows me to compare the current period with the same period from the previous year.
+
+Scenario-Based Questions
+31. Your Power BI report is very slow. What would you do?
+
+Answer:
+First, I would identify what is causing the performance issue. I would check the data model, number of columns, relationships, DAX measures, visuals, and
+data volume.
+
+I would try to:
+
+Remove unnecessary columns.
+Reduce unnecessary rows.
+Use a star schema.
+Optimize DAX.
+Reduce the number of visuals on a page.
+Prefer measures over unnecessary calculated columns.
+Check query performance and refresh time.
+32. The numbers in Power BI don't match Excel. What would you check?
+
+Answer:
+I would not immediately assume that Power BI is wrong. I would compare the source data, filters, calculations, relationships, and aggregation logic.
+
+I would check:
+
+Whether both datasets contain the same records.
+Whether filters are applied.
+Whether duplicates exist.
+Whether relationships are correct.
+Whether the DAX calculation matches the Excel formula.
+33. You have millions of rows. How would you handle the data?
+
+Answer:
+I would first understand what level of detail is actually required. Then I would optimize the model by removing unnecessary columns and rows, using a star schema, 
+applying incremental refresh where appropriate, and considering DirectQuery or composite models if the architecture requires it.
+
+34. How would you create a sales dashboard?
+
+Answer:
+First, I would understand the business requirements and KPIs.
+
+I might include:
+
+Total Sales
+Total Profit
+Profit Margin
+Total Orders
+Sales by Region
+Sales Trend by Month
+Top 10 Products
+Sales by Category
+
+I would also add slicers for Date, Region, Category, and Product so users can interact with the dashboard.
+
